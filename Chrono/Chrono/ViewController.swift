@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
@@ -19,11 +20,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    var ref: DatabaseReference!
+    
     @IBAction func action(_ sender: UIButton) {
         if emailText.text != "" && passwordText.text != "" {
             if segmentControl.selectedSegmentIndex == 0 && passwordText.text! == confirmPasswordText.text! { //sign-up
                 Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                     if (user != nil) {
+                        let values = ["email": self.emailText.text!]
+                        
+                        guard let uid = user?.uid else {
+                            return
+                        }
+                        
+                        let usersReference = self.ref.child("users").child(uid)
+                        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                            if err != nil {
+                                print(err)
+                                return
+                            }
+                            print("saved user to firebase db")
+                        })
                         self.performSegue(withIdentifier: "toOnboard", sender: self)
                     }
                 }
@@ -53,7 +70,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
