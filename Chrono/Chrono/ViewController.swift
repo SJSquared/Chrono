@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var ref: DatabaseReference!
     
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
                             print("saved user to firebase db")
                         })
                         self.performSegue(withIdentifier: "toOnboard", sender: self)
+                    } else {
+                        let errorMsg : String!
+                        errorMsg = error?.localizedDescription
+                        self.errorLabel.text! = errorMsg
                     }
                 }
                 
