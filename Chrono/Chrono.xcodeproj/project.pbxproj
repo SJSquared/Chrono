@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1592AB51FD8F95400360E58 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1592AB21FD8F93500360E58 /* Charts.framework */; };
+		A1592AB61FD8F95400360E58 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1592AB21FD8F93500360E58 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0FD1C4AF76C2B593F953BC7 /* Pods_ChronoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */; };
 		BF7DAF361FCA903D00ADB2F6 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7DAF351FCA903D00ADB2F6 /* OnboardViewController.swift */; };
 		BFC688BE1FC3A9A900C3BEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC688BD1FC3A9A900C3BEE8 /* AppDelegate.swift */; };
@@ -22,6 +24,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A1592AB11FD8F93500360E58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		A1592AB31FD8F93500360E58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		A1592AB71FD8F95400360E58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 		BFC688CF1FC3A9A900C3BEE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFC688B21FC3A9A900C3BEE8 /* Project object */;
@@ -38,6 +61,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A1592AB91FD8F95400360E58 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1592AB61FD8F95400360E58 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		24B25CCFC0B91D4F49E03A89 /* Pods_ChronoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ECE229A80B1EBD156ECD79 /* Pods-ChronoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoUITests/Pods-ChronoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +83,7 @@
 		60EE7B8E86661D491F8B33E8 /* Pods-ChronoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoUITests/Pods-ChronoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79EC589B8B96D1FE738F69AC /* Pods-ChronoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTests/Pods-ChronoTests.release.xcconfig"; sourceTree = "<group>"; };
 		84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7DAF351FCA903D00ADB2F6 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		BFC688BA1FC3A9A900C3BEE8 /* Chrono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chrono.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2C21068F9354350156B6EB /* Pods_Chrono.framework in Frameworks */,
+				A1592AB51FD8F95400360E58 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +142,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A1592AAD1FD8F93500360E58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1592AB21FD8F93500360E58 /* Charts.framework */,
+				A1592AB41FD8F93500360E58 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BFC688B11FC3A9A900C3BEE8 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +180,7 @@
 				BFC688C11FC3A9A900C3BEE8 /* Main.storyboard */,
 				BFC688BF1FC3A9A900C3BEE8 /* ViewController.swift */,
 				BF7DAF351FCA903D00ADB2F6 /* OnboardViewController.swift */,
+				A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */,
 				BFC688C41FC3A9A900C3BEE8 /* Assets.xcassets */,
 				BFC688C61FC3A9A900C3BEE8 /* LaunchScreen.storyboard */,
 				BFC688C91FC3A9A900C3BEE8 /* Info.plist */,
@@ -184,10 +233,12 @@
 				BFC688B81FC3A9A900C3BEE8 /* Resources */,
 				1BEF320EF18769FC0353BF2D /* [CP] Embed Pods Frameworks */,
 				23B2D65895292A60BB965162 /* [CP] Copy Pods Resources */,
+				A1592AB91FD8F95400360E58 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1592AB81FD8F95400360E58 /* PBXTargetDependency */,
 			);
 			name = Chrono;
 			productName = Chrono;
@@ -273,6 +324,12 @@
 			mainGroup = BFC688B11FC3A9A900C3BEE8;
 			productRefGroup = BFC688BB1FC3A9A900C3BEE8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A1592AAD1FD8F93500360E58 /* Products */;
+					ProjectRef = A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BFC688B91FC3A9A900C3BEE8 /* Chrono */,
@@ -281,6 +338,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A1592AB21FD8F93500360E58 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = A1592AB11FD8F93500360E58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A1592AB41FD8F93500360E58 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = A1592AB31FD8F93500360E58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BFC688B81FC3A9A900C3BEE8 /* Resources */ = {
@@ -318,15 +392,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chrono/Pods-Chrono-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -496,6 +576,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A1592AB81FD8F95400360E58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = A1592AB71FD8F95400360E58 /* PBXContainerItemProxy */;
+		};
 		BFC688D01FC3A9A900C3BEE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BFC688B91FC3A9A900C3BEE8 /* Chrono */;
@@ -639,13 +724,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BCDF86CBB31F53A7C57341C /* Pods-Chrono.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46W36DZ9XU;
+				DEVELOPMENT_TEAM = 623FM8P7D8;
 				INFOPLIST_FILE = Chrono/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SJSquared.Chrono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -655,13 +744,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3753F28D308885C719343662 /* Pods-Chrono.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46W36DZ9XU;
+				DEVELOPMENT_TEAM = 623FM8P7D8;
 				INFOPLIST_FILE = Chrono/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SJSquared.Chrono;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
