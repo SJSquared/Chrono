@@ -50,7 +50,11 @@
 		60EE7B8E86661D491F8B33E8 /* Pods-ChronoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoUITests/Pods-ChronoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79EC589B8B96D1FE738F69AC /* Pods-ChronoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTests/Pods-ChronoTests.release.xcconfig"; sourceTree = "<group>"; };
 		84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+<<<<<<< HEAD
 		A14C31D21FDA328B0024256F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+=======
+		9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 09ca16d82431429442fd5021f2ebfa7b6d9e1a43
 		A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerOnboardViewController.swift; sourceTree = "<group>"; };
 		BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeOnboardViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */,
 				BF414EF21FDA12E7009DAE7B /* employee.png */,
 				BF414EF01FDA1197009DAE7B /* small-business.png */,
+				9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */,
 			);
 			path = Chrono;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF9D9B91FDA36E800FAB7D1 /* PunchViewController.swift in Sources */,
 				BFC688C01FC3A9A900C3BEE8 /* ViewController.swift in Sources */,
 				BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */,
 				BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */,

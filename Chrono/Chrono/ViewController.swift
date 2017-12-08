@@ -53,6 +53,8 @@ class ViewController: UIViewController {
             } else { //login user
                 Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                     if (user != nil) {
+                        //print(user!.uid)
+                        //print(self.ref.child("users"))
                         self.performSegue(withIdentifier: "toOnboard", sender: self)
                     }
                 }

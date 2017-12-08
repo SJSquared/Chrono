@@ -58,7 +58,10 @@ DEPENDENCIES:
   - RealmSwift (~> 2.8.1)
 
 SPEC CHECKSUMS:
+<<<<<<< HEAD
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+=======
+>>>>>>> 09ca16d82431429442fd5021f2ebfa7b6d9e1a43
   Firebase: dbfb98ccec2dcfcd21ab9cc1b4981a3f3c8c5e26
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: cdeee95b528958dbb7dcf220ad0fb804d3a284b0
