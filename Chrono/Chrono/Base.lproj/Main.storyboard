@@ -171,6 +171,7 @@
                         <outlet property="segmentControl" destination="PWm-BD-X7X" id="vvJ-G5-nBp"/>
                         <outlet property="signupButton" destination="SnC-Vg-Fzj" id="y8c-is-TLY"/>
                         <segue destination="XZj-YW-Is4" kind="show" identifier="toOnboard" id="28o-qO-Tho"/>
+                        <segue destination="6CL-yP-E6d" kind="show" identifier="toMain" id="7io-6d-d31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -278,7 +279,7 @@
                                 <rect key="frame" x="85" y="327" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17234280705451965" green="0.17145809531211853" blue="0.22532662749290466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -293,7 +294,7 @@
                                 <rect key="frame" x="85" y="403" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17234280705451965" green="0.17145809531211853" blue="0.22532662749290466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -320,7 +321,7 @@
                                 <rect key="frame" x="85" y="254" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17234280705451965" green="0.17145809531211853" blue="0.22532662749290466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -358,8 +359,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-x1-Y4g">
-                                <rect key="frame" x="85" y="236" width="128" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-x1-Y4g">
+                                <rect key="frame" x="85" y="236" width="123" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -376,7 +377,7 @@
                                 <rect key="frame" x="85" y="257" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17232656478881836" green="0.17135968804359436" blue="0.22937098145484924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -384,7 +385,7 @@
                                 <rect key="frame" x="85" y="401" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17232656478881836" green="0.17135968804359436" blue="0.22937098145484924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -404,7 +405,7 @@
                                 <rect key="frame" x="85" y="326" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17232656478881836" green="0.17135968804359436" blue="0.22937098145484924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -424,6 +425,7 @@
                         <viewLayoutGuide key="safeArea" id="qrf-hx-5TY"/>
                     </view>
                     <connections>
+                        <outlet property="companyName" destination="waC-IQ-pZF" id="BmU-fN-5cK"/>
                         <outlet property="confirmButton" destination="yRp-Wi-H6G" id="djv-76-ZAF"/>
                         <outlet property="firstName" destination="tUP-Pj-s2f" id="VQO-st-nc3"/>
                         <outlet property="lastName" destination="OFb-o5-e59" id="W3E-5h-VEG"/>
@@ -453,9 +455,6 @@
                         <viewLayoutGuide key="safeArea" id="B6g-2i-8JZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="zck-tv-O1o"/>
-                    <connections>
-                        <outlet property="errorLabel" destination="gkF-O2-9w2" id="yhI-xS-q09"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MN-Tw-saZ" sceneMemberID="firstResponder"/>
             </objects>
