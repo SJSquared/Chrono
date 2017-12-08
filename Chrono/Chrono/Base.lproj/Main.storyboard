@@ -398,6 +398,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmTap:" destination="Bks-Y9-4S1" eventType="touchUpInside" id="k8G-XT-9MB"/>
+                                    <segue destination="6CL-yP-E6d" kind="show" id="tbO-sL-EEY"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tUP-Pj-s2f" userLabel="First Name">
