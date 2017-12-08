@@ -3775,13 +3775,8 @@
 		F3D8AC2F01CC94468944E7990459A34A /* Build configuration list for PBXNativeTarget "Pods-ChronoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-<<<<<<< HEAD
 				63253C21C4C7C84B723F9AF0A4A24012 /* Debug */,
 				66A29D66A44511EBA8CF0B4496EA2AA9 /* Release */,
-=======
-				CCA52AC750FEB1872D2AA25A1DBC3F45 /* Debug */,
-				20E820FE89C5727C58C3494CD08FF413 /* Release */,
->>>>>>> 09ca16d82431429442fd5021f2ebfa7b6d9e1a43
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

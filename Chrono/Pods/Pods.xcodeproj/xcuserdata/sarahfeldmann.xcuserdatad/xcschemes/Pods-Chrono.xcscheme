@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D9E09479D84672B386CD0B734AAA85B4"
-               BuildableName = "Pods_Chrono.framework"
+               BuildableName = "Pods-Chrono.framework"
                BlueprintName = "Pods-Chrono"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D9E09479D84672B386CD0B734AAA85B4"
-            BuildableName = "Pods_Chrono.framework"
+            BuildableName = "Pods-Chrono.framework"
             BlueprintName = "Pods-Chrono"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
