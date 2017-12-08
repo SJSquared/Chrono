@@ -556,10 +556,7 @@
                         <outlet property="errorLabel" destination="gkF-O2-9w2" id="yhI-xS-q09"/>
                         <outlet property="mealIn" destination="taI-ik-cxm" id="xn0-IY-3ae"/>
                         <outlet property="mealOut" destination="yXO-zb-rkM" id="5xm-pa-OEZ"/>
-                        <outlet property="punchTime" destination="xNT-di-ain" id="o4S-Eg-Rhi"/>
-                        <outlet property="punchType" destination="Kfr-jb-raP" id="YaW-QG-FEu"/>
                         <outlet property="table" destination="MTe-Bx-pvg" id="tlH-M9-Mcw"/>
-                        <outlet property="tableCell" destination="l7M-W3-RId" id="L91-Ot-Nnq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MN-Tw-saZ" sceneMemberID="firstResponder"/>
