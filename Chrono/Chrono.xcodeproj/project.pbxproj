@@ -185,11 +185,7 @@
 				BFC688BD1FC3A9A900C3BEE8 /* AppDelegate.swift */,
 				BFC688C11FC3A9A900C3BEE8 /* Main.storyboard */,
 				BFC688BF1FC3A9A900C3BEE8 /* ViewController.swift */,
-<<<<<<< HEAD
-				BF7DAF351FCA903D00ADB2F6 /* OnboardViewController.swift */,
 				A1592AAC1FD8F93500360E58 /* Charts.xcodeproj */,
-=======
->>>>>>> b91603743f7ca95bb0bf281f284ca4c45849c33f
 				BFC688C41FC3A9A900C3BEE8 /* Assets.xcassets */,
 				BFC688C61FC3A9A900C3BEE8 /* LaunchScreen.storyboard */,
 				BFC688C91FC3A9A900C3BEE8 /* Info.plist */,
@@ -742,14 +738,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 623FM8P7D8;
-=======
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
->>>>>>> b91603743f7ca95bb0bf281f284ca4c45849c33f
 				INFOPLIST_FILE = Chrono/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -767,14 +758,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 623FM8P7D8;
-=======
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
->>>>>>> b91603743f7ca95bb0bf281f284ca4c45849c33f
 				INFOPLIST_FILE = Chrono/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
