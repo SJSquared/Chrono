@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -171,7 +171,6 @@
                         <outlet property="segmentControl" destination="PWm-BD-X7X" id="vvJ-G5-nBp"/>
                         <outlet property="signupButton" destination="SnC-Vg-Fzj" id="y8c-is-TLY"/>
                         <segue destination="XZj-YW-Is4" kind="show" identifier="toOnboard" id="28o-qO-Tho"/>
-                        <segue destination="6CL-yP-E6d" kind="show" identifier="toMain" id="7io-6d-d31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -315,6 +314,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmTap:" destination="cKT-AS-hTO" eventType="touchUpInside" id="NhU-xg-9bO"/>
+                                    <segue destination="6CL-yP-E6d" kind="show" id="ORA-lx-Zfe"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nF-eG-Hdh">
@@ -399,6 +399,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmTap:" destination="Bks-Y9-4S1" eventType="touchUpInside" id="k8G-XT-9MB"/>
+                                    <segue destination="6CL-yP-E6d" kind="show" id="6d6-N8-j9d"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tUP-Pj-s2f" userLabel="First Name">
@@ -443,13 +444,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-O2-9w2">
-                                <rect key="frame" x="81" y="543" width="212" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.85882352939999995" green="0.3294117647" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-AM-l8P">
                                 <rect key="frame" x="0.0" y="430" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -551,21 +545,14 @@
                         <viewLayoutGuide key="safeArea" id="B6g-2i-8JZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="zck-tv-O1o"/>
-<<<<<<< HEAD
-=======
                     <connections>
                         <outlet property="clockIn" destination="uH1-AM-l8P" id="3gl-7w-cgh"/>
                         <outlet property="clockOut" destination="SMc-XN-rWZ" id="4yW-dr-68t"/>
                         <outlet property="currTime" destination="86f-Y4-o9c" id="dz2-2T-id6"/>
-                        <outlet property="errorLabel" destination="gkF-O2-9w2" id="yhI-xS-q09"/>
                         <outlet property="mealIn" destination="taI-ik-cxm" id="xn0-IY-3ae"/>
                         <outlet property="mealOut" destination="yXO-zb-rkM" id="5xm-pa-OEZ"/>
-                        <outlet property="punchTime" destination="xNT-di-ain" id="o4S-Eg-Rhi"/>
-                        <outlet property="punchType" destination="Kfr-jb-raP" id="YaW-QG-FEu"/>
                         <outlet property="table" destination="MTe-Bx-pvg" id="tlH-M9-Mcw"/>
-                        <outlet property="tableCell" destination="l7M-W3-RId" id="L91-Ot-Nnq"/>
                     </connections>
->>>>>>> dev
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MN-Tw-saZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,4 +563,7 @@
         <image name="employee.png" width="1536" height="1536"/>
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ORA-lx-Zfe"/>
+    </inferredMetricsTieBreakers>
 </document>

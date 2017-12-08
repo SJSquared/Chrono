@@ -11,9 +11,6 @@ import UIKit
 class PunchViewController: UIViewController {
 
     @IBOutlet weak var currTime: UILabel!
-    @IBOutlet weak var tableCell: UITableViewCell!
-    @IBOutlet weak var punchType: UILabel!
-    @IBOutlet weak var punchTime: UILabel!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var clockIn: UIButton!
     @IBOutlet weak var mealOut: UIButton!
