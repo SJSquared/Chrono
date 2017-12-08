@@ -76,6 +76,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        //self.navigationController?.navigationBar.isHidden = true
         
        /* let blueColor = UIColor(red: 154, green: 209, blue: 212, alpha: 1)
         let greenColor = UIColor(red: 98, green: 95, blue: 112, alpha: 1)
@@ -90,6 +91,12 @@ class ViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)*/
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //super.viewWillDisappear(animated)
+        //self.navigationController?.navigationBar.isHidden = false
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
