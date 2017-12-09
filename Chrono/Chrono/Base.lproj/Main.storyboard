@@ -561,13 +561,16 @@
         <!--Line Chart View Controller-->
         <scene sceneID="gSG-L5-fIt">
             <objects>
-                <viewController storyboardIdentifier="line" id="tmn-z4-4A2" userLabel="Line Chart View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NpC-bK-CL8">
+                <viewController storyboardIdentifier="line" id="tmn-z4-4A2" userLabel="Line Chart View Controller" customClass="ChartViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NpC-bK-CL8" customClass="BarChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.17092459399282478" blue="0.093146548820404629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nrt-wt-Dyj"/>
                     </view>
+                    <connections>
+                        <outlet property="barView" destination="NpC-bK-CL8" id="dpZ-gD-TlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCi-0E-VEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,7 +579,7 @@
         <!--Chart Page View Controller-->
         <scene sceneID="XKT-qT-eOz">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="9Q3-Kd-wZB" customClass="ChartPageViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9Q3-Kd-wZB" customClass="ChartPageViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x67-Lc-iO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4447" y="210"/>
@@ -588,7 +591,7 @@
                     <view key="view" contentMode="scaleToFill" id="8O9-3m-mVG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.66306694440581393" green="0.8356120488608505" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3ye-As-kj2"/>
                     </view>
                 </viewController>
