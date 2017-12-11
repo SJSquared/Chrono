@@ -61,9 +61,9 @@ class ViewController: UIViewController {
                             
                             // Grabs the value of the userType key of the JSON object
                             let userTypeValue = value?["userType"] as? String
-                            
+
                             // The user logging in already did the onboard process
-                            if (userTypeValue != nil || userTypeValue != "") {
+                            if (userTypeValue == "employee" || userTypeValue == "employer") {
                                 self.performSegue(withIdentifier: "toMain", sender: self)
                             } else { // The logging in user still needs to complete onboard process
                                 self.performSegue(withIdentifier: "toOnboard", sender: self)
