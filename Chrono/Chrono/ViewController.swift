@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             signupButton.setTitle("Login", for: .normal)
         } else {
             signupButton.setTitle("Sign-up", for: .normal)
-            confirmPasswordLabel.text = "confirm password";
+            confirmPasswordLabel.text = "Confirm password";
             confirmPasswordText.isHidden = false;
         }
     }
