@@ -131,6 +131,7 @@
                         <outlet property="segmentControl" destination="PWm-BD-X7X" id="vvJ-G5-nBp"/>
                         <outlet property="signupButton" destination="SnC-Vg-Fzj" id="y8c-is-TLY"/>
                         <segue destination="XZj-YW-Is4" kind="show" identifier="toOnboard" id="28o-qO-Tho"/>
+                        <segue destination="6CL-yP-E6d" kind="show" identifier="toMain" id="KRf-FO-fwk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -524,6 +525,6 @@
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6d6-N8-j9d"/>
+        <segue reference="KRf-FO-fwk"/>
     </inferredMetricsTieBreakers>
 </document>
