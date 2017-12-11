@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                 Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                     if (user != nil) {
                         //print(user!.uid)
-                        //print(self.ref.child("users"))
+                        print(self.ref.child("users").child(user!.uid))
                         self.performSegue(withIdentifier: "toOnboard", sender: self)
                     }
                 }
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             signupButton.setTitle("Login", for: .normal)
         } else {
             signupButton.setTitle("Sign-up", for: .normal)
-            confirmPasswordLabel.text = "confirm password";
+            confirmPasswordLabel.text = "Confirm password";
             confirmPasswordText.isHidden = false;
         }
     }
