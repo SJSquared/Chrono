@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A14C31D31FDA328B0024256F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D21FDA328B0024256F /* ChartViewController.swift */; };
 		A14C31D51FDBD8830024256F /* ChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D41FDBD8830024256F /* ChartPageViewController.swift */; };
+		A14C31D71FDE19350024256F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14C31D61FDE19350024256F /* Foundation.framework */; };
 		B0FD1C4AF76C2B593F953BC7 /* Pods_ChronoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */; };
 		BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */; };
 		BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */; };
@@ -53,6 +54,7 @@
 		84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14C31D21FDA328B0024256F /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		A14C31D41FDBD8830024256F /* ChartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageViewController.swift; sourceTree = "<group>"; };
+		A14C31D61FDE19350024256F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerOnboardViewController.swift; sourceTree = "<group>"; };
 		BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeOnboardViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14C31D71FDE19350024256F /* Foundation.framework in Frameworks */,
 				EB2C21068F9354350156B6EB /* Pods_Chrono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +109,7 @@
 		099BC8E37C093796152C12A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A14C31D61FDE19350024256F /* Foundation.framework */,
 				84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */,
 				A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */,
 				24B25CCFC0B91D4F49E03A89 /* Pods_ChronoUITests.framework */,
