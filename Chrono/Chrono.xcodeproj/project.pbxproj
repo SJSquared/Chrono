@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A14C31D31FDA328B0024256F /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D21FDA328B0024256F /* ChartViewController.swift */; };
 		A14C31D51FDBD8830024256F /* ChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D41FDBD8830024256F /* ChartPageViewController.swift */; };
-		A14C31D71FDE19350024256F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14C31D61FDE19350024256F /* Foundation.framework */; };
 		B0FD1C4AF76C2B593F953BC7 /* Pods_ChronoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */; };
 		BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */; };
 		BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */; };
@@ -82,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14C31D71FDE19350024256F /* Foundation.framework in Frameworks */,
 				EB2C21068F9354350156B6EB /* Pods_Chrono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

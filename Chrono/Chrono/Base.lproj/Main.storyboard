@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Q3-Kd-wZB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -569,6 +568,9 @@
                         <color key="backgroundColor" red="1" green="0.17092459399282478" blue="0.093146548820404629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nNG-Eb-jiJ"/>
                     </view>
+                    <connections>
+                        <outlet property="pieChart" destination="NpC-bK-CL8" id="6wX-Ir-VLO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCi-0E-VEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,23 +614,23 @@
             </objects>
             <point key="canvasLocation" x="4447" y="210"/>
         </scene>
-        <!--Line Chart View Controller-->
+        <!--MultiBar Chart View Controller-->
         <scene sceneID="Ilu-Cp-ulo">
             <objects>
-                <viewController storyboardIdentifier="bar" id="GDh-Rf-2rr" userLabel="Line Chart View Controller" customClass="ChartViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bar" id="GDh-Rf-2rr" userLabel="MultiBar Chart View Controller" customClass="ChartViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LX1-hq-38b" userLabel="Line View" customClass="BarChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="I2W-Pf-sxi"/>
                     </view>
                     <connections>
-                        <outlet property="barView2" destination="LX1-hq-38b" id="lhn-i8-2ZJ"/>
+                        <outlet property="barView2" destination="LX1-hq-38b" id="CUd-Fm-s69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3h-70-fsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5134" y="209"/>
+            <point key="canvasLocation" x="804" y="949"/>
         </scene>
     </scenes>
     <resources>
@@ -636,6 +638,6 @@
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ORA-lx-Zfe"/>
+        <segue reference="6d6-N8-j9d"/>
     </inferredMetricsTieBreakers>
 </document>

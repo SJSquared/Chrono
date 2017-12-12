@@ -20,14 +20,24 @@ class EmployeeOnboardViewController: UIViewController {
     @IBOutlet weak var confirmButton: UIButton!
     
     @IBAction func confirmTap(_ sender: UIButton) {
-        let values = ["firstName": self.firstName.text!, "lastName": self.lastName.text!, "email": user!.email, "userType": "employee"]
+        let userValues = ["firstName": self.firstName.text!, "lastName": self.lastName.text!, "email": user!.email, "currentCompany": companyName.text!, "userType": "employee"]
         
         guard let uid = user?.uid else {
             return
         }
         
-        let usersReference = self.ref.child("companies").child(companyName.text!).child(user!.uid)
-        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+        let usersReference = self.ref.child("users").child(user!.uid)
+        usersReference.updateChildValues(userValues, withCompletionBlock: { (err, ref) in
+            if err != nil {
+                print(err)
+                return
+            }
+            print("update user to firebase db")
+        })
+        
+        let userCompanyValue = ["email": user!.email]
+        let companyReference = self.ref.child("companies").child(companyName.text!).child(user!.uid)
+        companyReference.updateChildValues(userCompanyValue, withCompletionBlock: { (err, ref) in
             if err != nil {
                 print(err)
                 return
@@ -45,5 +55,6 @@ class EmployeeOnboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
 
 
