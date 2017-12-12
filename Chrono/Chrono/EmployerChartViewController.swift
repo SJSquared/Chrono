@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import Firebase
+import FirebaseDatabase
 
 class EmployerChartViewController: UIViewController {
     @IBOutlet weak var barView: BarChartView!

@@ -616,18 +616,28 @@
         <!--Graph-->
         <scene sceneID="Wsr-eL-uzp">
             <objects>
-                <viewController id="Tgw-Gy-n3o" sceneMemberID="viewController">
+                <viewController id="Tgw-Gy-n3o" customClass="EmployeeChartViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MgV-c7-LGU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-fe-aAa" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22272306680000001" green="0.24197843669999999" blue="0.30423054100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cQm-k3-eLg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" image="chart1x" id="nuK-40-87S"/>
+                    <connections>
+                        <outlet property="barChartView" destination="sDZ-fe-aAa" id="6dU-Iw-9xE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dP-Rk-Eav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3780" y="-197"/>
+            <point key="canvasLocation" x="3780" y="-197.45127436281859"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yvj-1M-TE4">

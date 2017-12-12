@@ -12,6 +12,8 @@ import FirebaseDatabase
 
 class PunchViewController: UIViewController {
 
+    var data = AppData.shared
+    
     @IBOutlet weak var currTime: UILabel!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var clockIn: UIButton!
@@ -22,6 +24,8 @@ class PunchViewController: UIViewController {
     var uid: String!
     var ref: DatabaseReference!
     var company: String!
+    var userValue : NSDictionary = ["key":"value"]
+    var currentCompany : String = ""
     
     @IBAction func clickClockIn(_ sender: Any) {
         let currTime = Date()
@@ -58,7 +62,18 @@ class PunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ref = Database.database().reference()
+
+        
+        let handle = Auth.auth().addStateDidChangeListener{ (auth, user) in
+            self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                self.userValue = snapshot.value as! NSDictionary
+                self.data.currentCompany = self.userValue["currentCompany"] as! String
+                print("self.currentCompany \(self.currentCompany)")
+            })
+        }
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0,
             target: self,
             selector: #selector(tick),
