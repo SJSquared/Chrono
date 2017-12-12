@@ -16,8 +16,9 @@ class PunchViewController: UIViewController {
     @IBOutlet weak var mealOut: UIButton!
     @IBOutlet weak var mealIn: UIButton!
     @IBOutlet weak var clockOut: UIButton!
-    
-    
+    var timer = Timer()
+
+
     @IBAction func clickClockIn(_ sender: Any) {
         
     }
@@ -37,10 +38,20 @@ class PunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+            target: self,
+            selector: #selector(tick),
+            userInfo: nil,
+            repeats: true)
     }
 
+    @objc func tick() {
+        currTime.text = DateFormatter.localizedString(from: Date(),
+                                                                    dateStyle: .medium,
+                                                                    timeStyle: .medium)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

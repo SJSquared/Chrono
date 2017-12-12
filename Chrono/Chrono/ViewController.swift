@@ -63,8 +63,10 @@ class ViewController: UIViewController {
                             let userTypeValue = value?["userType"] as? String
 
                             // The user logging in already did the onboard process
-                            if (userTypeValue == "employee" || userTypeValue == "employer") {
-                                self.performSegue(withIdentifier: "toMain", sender: self)
+                            if (userTypeValue == "employer") {
+                                self.performSegue(withIdentifier: "toEmployer", sender: self)
+                            } else if (userTypeValue == "employee") {
+                                self.performSegue(withIdentifier: "toEmployee", sender: self)
                             } else { // The logging in user still needs to complete onboard process
                                 self.performSegue(withIdentifier: "toOnboard", sender: self)
                             }
