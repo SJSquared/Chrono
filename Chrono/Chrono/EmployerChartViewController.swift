@@ -45,69 +45,7 @@ class EmployerChartViewController: UIViewController {
         
         print("companyData \(companyData)")
         
-        
-//
-//        let userId : String = (Auth.auth().currentUser?.uid)!
-//        print("userID \(userId)")
-//
-//        refHandle = ref.observe(DataEventType.childAdded, with: { (snapshot) in
-//            let dataDict = snapshot.value as! [String: AnyObject]
-//
-//            print(dataDict)
-//
-//            let companyOwner = dataDict["users"]![userId]!
-        
-//            print("companyOwner \(companyOwner)")
-            
-//            let companyName = companyOwner!["currentCompany"]
-//
-//            print(companyName)
-//
-//            let employees : [AnyObject] = dataDict["companies"][companyName]
-//
-//            print(employees)
-//        })
-        
-        
-        
-        
-        
-        
-        
-        
-        // Listens for the current logged in user
-//        let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-//            self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-//                self.userValue = snapshot.value as! NSDictionary
-//                self.currentCompany = self.userValue["currentCompany"] as! String
-//                self.ref.child("companies").child(self.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
-//                    let value = snapshot.value as! NSDictionary
-//
-//                    // Saves all the employee IDS in the current company
-//                    self.employeeIDs = value.allKeys as! [String]
-//
-//                })
-//            })
-//        }
-//
-       
-        
-        
-//        print(dataDict["users"])
-        
-//        var json: [Any]?
-//        do {
-//            json = try JSONSerialization.jsonObject(with: dataDict)
-//        } catch {
-//            print(error)
-//        }
-//        print("json \(json)")
-        
 
-//        ref.child("Users").child(userId).observeSingleEventofType(.Value), withBlock: { (snapshot) in
-//            let email = snapshot.value!["Email"] as String!
-//
-//        }
 //
         self.title = "Multiple Bar Chart"
    
@@ -155,12 +93,13 @@ class EmployerChartViewController: UIViewController {
     }
     
     func updateChartWithData(){
-//        var employeeIds = self.data.employeeIds
-//
+        var employeeIds = self.data.employeeIds
+        print("employeeIds \(self.data.employeeIds)")
 //        for i in 0...employeeIds.count-1{
-//
+//            var employeeDays = [String]()
+////            for j in 0...
 //        }
-//
+
 //
         
 //        let groupSpace = 0.08
@@ -201,28 +140,28 @@ class EmployerChartViewController: UIViewController {
         let chartDataSet = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 8.5), BarChartDataEntry(x: 2, y: 9.5), BarChartDataEntry(x: 2, y: 7.5)], label: "Employee 1")
         let chartDataSet1 = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 5.5), BarChartDataEntry(x: 2, y: 6.5), BarChartDataEntry(x: 2, y: 9.5)], label: "Employee 2")
         
-    
+//
         let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
         let chartData = BarChartData(dataSets: dataSets)
+//
+//        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+//
+//
+//        let groupSpace = 0.3
+//        let barSpace = 0.05
+//        let barWidth = 0.3
+//
+//        let groupCount = 12
+//        let startYear = 0
+//
+//
+//        chartData.barWidth = barWidth;
+//        barView.xAxis.axisMinimum = Double(startYear)
+//        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+//        print("Groupspace: \(gg)")
+//        barView.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
         
-        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
-
-        
-        let groupSpace = 0.3
-        let barSpace = 0.05
-        let barWidth = 0.3
-        
-        let groupCount = 12
-        let startYear = 0
-        
-        
-        chartData.barWidth = barWidth;
-        barView.xAxis.axisMinimum = Double(startYear)
-        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
-        print("Groupspace: \(gg)")
-        barView.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
-        
-        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
+//        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
         //chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
         barView.notifyDataSetChanged()
 
