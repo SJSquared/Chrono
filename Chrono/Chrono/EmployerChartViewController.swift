@@ -10,16 +10,17 @@ import UIKit
 import Charts
 import Firebase
 
-class ChartViewController: UIViewController {
- 
+class EmployerChartViewController: UIViewController {
+    @IBOutlet weak var barView: BarChartView!
+    
     var ref: DatabaseReference!
     var refHandle: UInt!
     
     
-    @IBOutlet weak var barView2: BarChartView!
+//    @IBOutlet weak var barView: BarChartView!
 //    @IBOutlet weak var pieChart: PieView2!
     
-//    @IBOutlet var barView2: BarbarView2!
+//    @IBOutlet var barView: BarbarView2!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +32,22 @@ class ChartViewController: UIViewController {
             print(dataDict)
         })
         
-        
+        let userId : String = (Auth.auth().currentUser?.uid)!
+        print("userID \(userId)")
+//        ref.child("Users").child(userId).observeSingleEventofType(.Value), withBlock: { (snapshot) in
+//            let email = snapshot.value!["Email"] as String!
+//
+//        }
+//
         self.title = "Multiple Bar Chart"
    
         
-        barView2.chartDescription?.enabled =  false
+        barView.chartDescription?.enabled =  false
         
-        barView2.pinchZoomEnabled = false
-        barView2.drawBarShadowEnabled = false
+        barView.pinchZoomEnabled = false
+        barView.drawBarShadowEnabled = false
         
-        let l = barView2.legend
+        let l = barView.legend
         l.horizontalAlignment = .right
         l.verticalAlignment = .top
         l.orientation = .vertical
@@ -52,7 +59,7 @@ class ChartViewController: UIViewController {
         
         updateChartWithData()
         
-        let xAxis = barView2.xAxis
+        let xAxis = barView.xAxis
         xAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
         xAxis.granularity = 1
         xAxis.centerAxisLabelsEnabled = true
@@ -61,7 +68,7 @@ class ChartViewController: UIViewController {
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.maximumFractionDigits = 1
         
-        let leftAxis = barView2.leftAxis
+        let leftAxis = barView.leftAxis
         leftAxis.labelFont = .systemFont(ofSize: 10, weight: .light)
 //        leftAxis.valueFormatter = LargeValueFormatter()
         leftAxis.spaceTop = 0.35
@@ -85,7 +92,7 @@ class ChartViewController: UIViewController {
 //        }
 //        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Hours logged")
 //        let chartData = BarChartData(dataSet: chartDataSet)
-//        barView2.data = chartData
+//        barView.data = chartData
         
         let groupSpace = 0.08
         let barSpace = 0.03
@@ -124,14 +131,14 @@ class ChartViewController: UIViewController {
         data.barWidth = barWidth
         
         // restrict the x-axis range
-        barView2.xAxis.axisMinimum = Double(startYear)
+        barView.xAxis.axisMinimum = Double(startYear)
         
         // groupWidthWithGroupSpace(...) is a helper that calculates the width each group needs based on the provided parameters
-        barView2.xAxis.axisMaximum = Double(startYear) + data.groupWidth(groupSpace: groupSpace, barSpace: barSpace) * Double(groupCount)
+        barView.xAxis.axisMaximum = Double(startYear) + data.groupWidth(groupSpace: groupSpace, barSpace: barSpace) * Double(groupCount)
         
         data.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
         
-        barView2.data = data
+        barView.data = data
     }
     
 //    func pieChartUpdate () {
