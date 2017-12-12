@@ -10,14 +10,22 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class PunchViewController: UIViewController {
+class PunchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
     @IBOutlet weak var currTime: UILabel!
-    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var clockIn: UIButton!
     @IBOutlet weak var mealOut: UIButton!
     @IBOutlet weak var mealIn: UIButton!
     @IBOutlet weak var clockOut: UIButton!
+    @IBOutlet weak var table: UITableView!
     var timer = Timer()
     var uid: String!
     var ref: DatabaseReference!
@@ -66,7 +74,6 @@ class PunchViewController: UIViewController {
             repeats: true)
         uid = Auth.auth().currentUser?.uid
         ref.child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
             let value = snapshot.value as? NSDictionary
             self.company = value?["currentCompany"] as? String ?? ""
             }) { (error) in
