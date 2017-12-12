@@ -315,7 +315,7 @@
         <!--Employees-->
         <scene sceneID="vEX-FG-nxq">
             <objects>
-                <viewController id="pjz-eg-CaE" sceneMemberID="viewController">
+                <viewController id="pjz-eg-CaE" customClass="EmployeesViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ze-FC-VqI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
