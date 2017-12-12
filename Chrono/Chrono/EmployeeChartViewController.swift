@@ -15,7 +15,6 @@ class EmployeeChartViewController: UIViewController {
 
     var ref: DatabaseReference!
     var currentCompany : String = ""
-    
     var data = AppData.shared
     
     @IBOutlet weak var barChartView: BarChartView!
@@ -52,7 +51,6 @@ class EmployeeChartViewController: UIViewController {
 //        barChartView.data = data
 //        barChartView.chartDescription?.text = "Number of Widgets by Type"
     }
-
     /*
     // MARK: - Navigation
 
