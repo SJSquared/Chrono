@@ -105,7 +105,8 @@ class PunchViewController: UIViewController {
                             var dateKeys : [String] = date.allKeys as! [String]
                             for j in 0...dateKeys.count-1 {
                                 if(dateKeys[j] == "interval"){
-                                    times.append(date[dateKeys[j]]!)
+                                    // convert seconds to hours
+                                    times.append(date[dateKeys[j]]! as! Double / 3600.0)
                                      print("times \(times)")
                                 }
                             }
