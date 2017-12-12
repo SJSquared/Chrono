@@ -15,7 +15,7 @@ class AppData: NSObject {
     // Employers
     
     var currentCompany: String = ""
-    
+    var employeeWork = [String:Any]()
 //    var currentUser: String
 //
 //    var employees = [String : Any?]

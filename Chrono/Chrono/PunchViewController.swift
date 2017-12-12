@@ -69,8 +69,35 @@ class PunchViewController: UIViewController {
         let handle = Auth.auth().addStateDidChangeListener{ (auth, user) in
             self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 self.userValue = snapshot.value as! NSDictionary
+                
+                // Current Company
                 self.data.currentCompany = self.userValue["currentCompany"] as! String
-                print("self.currentCompany \(self.currentCompany)")
+                
+                // Employee Hours
+                self.ref.child("companies").child(self.data.currentCompany).child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as! NSDictionary
+                    var keys = value.allKeys as! [String]
+                    print("keys \(keys)")
+                    keys.remove(at: (keys.count - 1))
+                    print("keys after deleting? \(keys)")
+                    
+                    var times = [Any]()
+                    
+                    var hours = [String:Any]()
+                    
+                    for i in 0...keys.count-1 {
+                        let date = value[keys[i]] as! NSDictionary
+                        var dateKeys : [String] = date.allKeys as! [String]
+                        for j in 0...dateKeys.count-1 {
+                            if(dateKeys[j] == "interval"){
+                                times.append(date[dateKeys[j]]!)
+                            }
+                        }
+                        hours[keys[i]] = String(describing: times[i])
+                        print(hours)
+                        self.data.employeeWork = hours
+                    }
+                })
             })
         }
         
