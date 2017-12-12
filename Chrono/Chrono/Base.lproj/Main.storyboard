@@ -115,6 +115,7 @@
                         <outlet property="segmentControl" destination="PWm-BD-X7X" id="vvJ-G5-nBp"/>
                         <outlet property="signupButton" destination="SnC-Vg-Fzj" id="y8c-is-TLY"/>
                         <segue destination="XZj-YW-Is4" kind="show" identifier="toOnboard" id="28o-qO-Tho"/>
+                        <segue destination="m6D-HM-ykK" kind="show" identifier="toEmployer" id="0dV-7g-Jvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
