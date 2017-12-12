@@ -11,25 +11,29 @@ import Firebase
 import FirebaseDatabase
 
 class PunchViewController: UIViewController {
+   
 
     var data = AppData.shared
     
     @IBOutlet weak var currTime: UILabel!
-    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var clockIn: UIButton!
     @IBOutlet weak var mealOut: UIButton!
     @IBOutlet weak var mealIn: UIButton!
     @IBOutlet weak var clockOut: UIButton!
     var timer = Timer()
     var uid: String!
+    var clockInTime : Date!
     var ref: DatabaseReference!
     var company: String!
     var userValue : NSDictionary = ["key":"value"]
     var currentCompany : String = ""
     
+   
+    
     @IBAction func clickClockIn(_ sender: Any) {
         print("clicky clack")
         let currTime = Date()
+        self.clockInTime = currTime
         writeData("cIn", currTime)
     }
     
@@ -46,6 +50,7 @@ class PunchViewController: UIViewController {
     @IBAction func clickClockOut(_ sender: Any) {
         let currTime = Date()
         writeData("cOut", currTime)
+        
     }
     
     func writeData(_ type: String, _ time: Date) {
@@ -55,10 +60,10 @@ class PunchViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US")
         print(dateFormatter.string(from: time))
         let date = dateFormatter.string(from: time)
-        self.ref.child("companies").child(self.company).child(self.uid).child(date + "/" + type).setValue(DateFormatter.localizedString(from: time,
-                                                                                            dateStyle: .medium,
-                                                                                                            timeStyle: .medium))
-
+        self.ref.child("companies").child(self.company).child(self.uid).child(date + "/" + type).setValue(DateFormatter.localizedString(from: time, dateStyle: .medium, timeStyle: .medium))
+        if (type == "cOut") {
+            self.ref.child("companies").child(self.company).child(self.uid).child(date + "/interval").setValue(time.timeIntervalSince(self.clockInTime))
+        }
     }
     
     override func viewDidLoad() {
@@ -85,25 +90,27 @@ class PunchViewController: UIViewController {
                     var times = [Any]()
                     
                     var hours = [String:Any]()
-                    if keys.count != 0{
-                    for i in 0...keys.count-1 {
-                        let date = value[keys[i]] as! NSDictionary
-                        var dateKeys : [String] = date.allKeys as! [String]
-                        for j in 0...dateKeys.count-1 {
-                            if(dateKeys[j] == "interval"){
-                                times.append(date[dateKeys[j]]!)
+                    if keys.count > 0 {
+                        print("in if statement")
+                        for i in 0...keys.count-1 {
+                            let date = value[keys[i]] as! NSDictionary
+                            var dateKeys : [String] = date.allKeys as! [String]
+                            for j in 0...dateKeys.count-1 {
+                                if(dateKeys[j] == "interval"){
+                                    times.append(date[dateKeys[j]]!)
+                                }
                             }
+                            hours[keys[i]] = String(describing: times[i])
+                            print(hours)
+                            self.data.employeeWork = hours
+                            self.data.employeeDays = keys
                         }
-                        hours[keys[i]] = String(describing: times[i])
-                        print(hours)
-                        self.data.employeeWork = hours
-                        self.data.employeeDays = keys
-                    }
                     }
                 })
             })
         }
         
+        clockInTime = Date()
         timer = Timer.scheduledTimer(timeInterval: 1.0,
             target: self,
             selector: #selector(tick),
@@ -111,7 +118,6 @@ class PunchViewController: UIViewController {
             repeats: true)
         uid = Auth.auth().currentUser?.uid
         ref.child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
             let value = snapshot.value as? NSDictionary
             self.company = value?["currentCompany"] as? String ?? ""
             }) { (error) in
