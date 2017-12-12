@@ -53,9 +53,22 @@ class ViewController: UIViewController {
             } else { //login user
                 Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
                     if (user != nil) {
-                        //print(user!.uid)
-                        //print(self.ref.child("users"))
-                        self.performSegue(withIdentifier: "toOnboard", sender: self)
+                        // Reading data once that we do not expect to change
+                        self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                            
+                            // Saves JSON object of the user
+                            let value = snapshot.value as? NSDictionary
+                            
+                            // Grabs the value of the userType key of the JSON object
+                            let userTypeValue = value?["userType"] as? String
+
+                            // The user logging in already did the onboard process
+                            if (userTypeValue == "employee" || userTypeValue == "employer") {
+                                self.performSegue(withIdentifier: "toMain", sender: self)
+                            } else { // The logging in user still needs to complete onboard process
+                                self.performSegue(withIdentifier: "toOnboard", sender: self)
+                            }
+                        })
                     }
                 }
             }
@@ -70,28 +83,16 @@ class ViewController: UIViewController {
             signupButton.setTitle("Login", for: .normal)
         } else {
             signupButton.setTitle("Sign-up", for: .normal)
-            confirmPasswordLabel.text = "confirm password";
+            confirmPasswordLabel.text = "Confirm password";
             confirmPasswordText.isHidden = false;
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set Firebase reference
         ref = Database.database().reference()
-        //self.navigationController?.navigationBar.isHidden = true
-        
-       /* let blueColor = UIColor(red: 154, green: 209, blue: 212, alpha: 1)
-        let greenColor = UIColor(red: 98, green: 95, blue: 112, alpha: 1)
-        
-        let gradientColor: [CGColor] = [blueColor.cgColor, greenColor.cgColor]
-        let gradientLocations: [NSNumber] = [0.0, 1.0]
-        
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColor
-        gradientLayer.locations = gradientLocations
-        
-        gradientLayer.frame = self.view.bounds
-        self.view.layer.insertSublayer(gradientLayer, at: 0)*/
     }
     
     override func viewWillDisappear(_ animated: Bool) {
