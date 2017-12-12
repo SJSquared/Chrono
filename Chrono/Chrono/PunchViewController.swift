@@ -86,9 +86,13 @@ class PunchViewController: UIViewController {
                 // Employee Hours
                 self.ref.child("companies").child(self.data.currentCompany).child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as! NSDictionary
+                    
+                    // Grabs the dates and email
                     var keys = value.allKeys as! [String]
                     print("keys \(keys)")
-                    keys.remove(at: (keys.count - 1))
+                    
+                    // Remove email from keys
+                    keys = keys.filter{$0 != "email"}
                     print("keys after deleting? \(keys)")
                     
                     var times = [Any]()
@@ -102,6 +106,7 @@ class PunchViewController: UIViewController {
                             for j in 0...dateKeys.count-1 {
                                 if(dateKeys[j] == "interval"){
                                     times.append(date[dateKeys[j]]!)
+                                     print("times \(times)")
                                 }
                             }
                             hours[keys[i]] = String(describing: times[i])
