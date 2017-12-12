@@ -351,6 +351,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.10541462153196335" green="0.11704163998365402" blue="0.15025144815444946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.26402196288108826" green="0.54082226753234863" blue="0.3380381166934967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="kuk-3c-WOl" kind="relationship" relationship="viewControllers" id="zzL-3w-uQz"/>
