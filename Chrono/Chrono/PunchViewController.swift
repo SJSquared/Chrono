@@ -28,6 +28,7 @@ class PunchViewController: UIViewController {
     var currentCompany : String = ""
     
     @IBAction func clickClockIn(_ sender: Any) {
+        print("clicky clack")
         let currTime = Date()
         writeData("cIn", currTime)
     }
@@ -84,7 +85,7 @@ class PunchViewController: UIViewController {
                     var times = [Any]()
                     
                     var hours = [String:Any]()
-                    
+                    if keys.count != 0{
                     for i in 0...keys.count-1 {
                         let date = value[keys[i]] as! NSDictionary
                         var dateKeys : [String] = date.allKeys as! [String]
@@ -97,6 +98,7 @@ class PunchViewController: UIViewController {
                         print(hours)
                         self.data.employeeWork = hours
                         self.data.employeeDays = keys
+                    }
                     }
                 })
             })
