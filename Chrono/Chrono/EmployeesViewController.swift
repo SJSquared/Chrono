@@ -13,17 +13,26 @@ import FirebaseDatabase
 class EmployeesViewController: UIViewController {
     var ref: DatabaseReference!
     
+    var currentCompany : String = ""
+    var userValue : NSDictionary = ["key":"value"]
+    var companyValue: NSDictionary = ["key":"value"]
+    var employeeIDs = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         
+        // Listens for the current logged in user
         let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            var currentCompany : String = ""
             self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                let userValue = snapshot.value as? NSDictionary
-                currentCompany = userValue?["currentCompany"] as! String
-                print(userValue)
-                print(currentCompany)
+                self.userValue = snapshot.value as! NSDictionary
+                self.currentCompany = self.userValue["currentCompany"] as! String
+                self.ref.child("companies").child(self.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as! NSDictionary
+                    
+                    // Saves all the employee IDS in the current company
+                    self.employeeIDs = value.allKeys as! [String]
+                })
             })
         }
     }
