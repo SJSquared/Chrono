@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class EmployeesViewController: UIViewController {
+class EmployeesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var ref: DatabaseReference!
     
     var currentCompany : String = ""
@@ -40,6 +40,16 @@ class EmployeesViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellController
+
+        return cell
     }
 }
 

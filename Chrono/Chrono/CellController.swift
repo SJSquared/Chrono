@@ -8,7 +8,9 @@
 import UIKit
 
 class CellController: UITableViewCell {
-
+    @IBOutlet weak var employeeName: UILabel!
+    @IBOutlet weak var employeeEmail: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

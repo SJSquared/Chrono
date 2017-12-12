@@ -349,6 +349,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="employeeEmail" destination="UKm-Rv-ggc" id="Xtc-yT-IeQ"/>
+                                            <outlet property="employeeName" destination="BNy-ph-GPa" id="Bpd-GQ-JOS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
