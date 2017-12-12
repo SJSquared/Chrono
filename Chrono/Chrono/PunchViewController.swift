@@ -96,6 +96,7 @@ class PunchViewController: UIViewController {
                         hours[keys[i]] = String(describing: times[i])
                         print(hours)
                         self.data.employeeWork = hours
+                        self.data.employeeDays = keys
                     }
                 })
             })

@@ -210,6 +210,7 @@ class EmployerChartViewController: UIViewController {
         barView.data = data
     }
     
+
 //    func pieChartUpdate () {
 //
 //        // Basic set up of plan chart
