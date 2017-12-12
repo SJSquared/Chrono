@@ -13,8 +13,12 @@ import Firebase
 class EmployerChartViewController: UIViewController {
     @IBOutlet weak var barView: BarChartView!
     
-    var ref: DatabaseReference!
     var refHandle: UInt!
+    
+    var currentCompany : String = ""
+    var userValue : NSDictionary = ["key":"value"]
+    var companyValue: NSDictionary = ["key":"value"]
+    var employeeIDs = [String]()
     
     
 //    @IBOutlet weak var barView: BarChartView!
@@ -22,18 +26,82 @@ class EmployerChartViewController: UIViewController {
     
 //    @IBOutlet var barView: BarbarView2!
     
+    var ref: DatabaseReference!
+    var companyData = [String]()
+    var databaseHandle : DatabaseHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ref = Database.database().reference()
-        refHandle = ref.observe(DataEventType.value, with: { (snapshot) in
-            let dataDict = snapshot.value as! [String: AnyObject]
-            
-            print(dataDict)
+        
+       databaseHandle = ref.child("companies").observe(.childAdded, with: {(snapshot) in
+        let company = snapshot.value as? String
+        if let actualCompany = company {
+            self.companyData.append(actualCompany)
+        }
         })
         
-        let userId : String = (Auth.auth().currentUser?.uid)!
-        print("userID \(userId)")
+        print("companyData \(companyData)")
+        
+        
+//
+//        let userId : String = (Auth.auth().currentUser?.uid)!
+//        print("userID \(userId)")
+//
+//        refHandle = ref.observe(DataEventType.childAdded, with: { (snapshot) in
+//            let dataDict = snapshot.value as! [String: AnyObject]
+//
+//            print(dataDict)
+//
+//            let companyOwner = dataDict["users"]![userId]!
+        
+//            print("companyOwner \(companyOwner)")
+            
+//            let companyName = companyOwner!["currentCompany"]
+//
+//            print(companyName)
+//
+//            let employees : [AnyObject] = dataDict["companies"][companyName]
+//
+//            print(employees)
+//        })
+        
+        
+        
+        
+        
+        
+        
+        
+        // Listens for the current logged in user
+//        let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+//            self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+//                self.userValue = snapshot.value as! NSDictionary
+//                self.currentCompany = self.userValue["currentCompany"] as! String
+//                self.ref.child("companies").child(self.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
+//                    let value = snapshot.value as! NSDictionary
+//
+//                    // Saves all the employee IDS in the current company
+//                    self.employeeIDs = value.allKeys as! [String]
+//
+//                })
+//            })
+//        }
+//
+       
+        
+        
+//        print(dataDict["users"])
+        
+//        var json: [Any]?
+//        do {
+//            json = try JSONSerialization.jsonObject(with: dataDict)
+//        } catch {
+//            print(error)
+//        }
+//        print("json \(json)")
+        
+
 //        ref.child("Users").child(userId).observeSingleEventofType(.Value), withBlock: { (snapshot) in
 //            let email = snapshot.value!["Email"] as String!
 //
