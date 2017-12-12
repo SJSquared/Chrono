@@ -27,6 +27,7 @@ class PunchViewController: UIViewController {
     var company: String!
     var userValue : NSDictionary = ["key":"value"]
     var currentCompany : String = ""
+    var userType : ""
     
    
     
@@ -79,6 +80,9 @@ class PunchViewController: UIViewController {
                 // Current Company
                 self.data.currentCompany = self.userValue["currentCompany"] as! String
                 
+                // User Type
+                var userType = self.userValue["userType"] as! String
+                
                 // Employee Hours
                 self.ref.child("companies").child(self.data.currentCompany).child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as! NSDictionary
@@ -123,6 +127,21 @@ class PunchViewController: UIViewController {
             }) { (error) in
             print(error.localizedDescription)
         }
+        
+        
+        if userType == "employer" {
+            let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            self.ref.child("companies").child(self.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as! NSDictionary
+                // Saves all the employee IDS in the current company
+                self.data.employeeIds = value.allKeys as! [String]
+                })
+            }
+        }
+        
+        
+        
+        
     }
 
     @objc func tick() {
