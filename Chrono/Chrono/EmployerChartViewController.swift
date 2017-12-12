@@ -155,13 +155,13 @@ class EmployerChartViewController: UIViewController {
     }
     
     func updateChartWithData(){
-        var employeeIds = self.data.employeeIds
-        
-        for i in 0...employeeIds.count-1{
-            
-        }
-        
-        
+//        var employeeIds = self.data.employeeIds
+//
+//        for i in 0...employeeIds.count-1{
+//
+//        }
+//
+//
         
 //        let groupSpace = 0.08
 //        let barSpace = 0.03
@@ -175,7 +175,61 @@ class EmployerChartViewController: UIViewController {
 //        let block: (Int) -> BarChartDataEntry = { (i) -> BarChartDataEntry in
 //            return BarChartDataEntry(x: Double(i), y: Double(arc4random_uniform(UInt32(randomMultiplier))))
 //        }
-//        let yVals1 = (startYear ..< endYear).map(block)
+      
+//        var dataEntries: [BarChartDataEntry] = []
+
+        
+        var dataEntries: [BarChartDataEntry] = []
+        var dataEntries1: [BarChartDataEntry] = []
+        
+//        for i in 0..<self.months.count {
+//
+//            let dataEntry = BarChartDataEntry(x: Double(i) , y: self.unitsSold[i])
+//            dataEntries.append(dataEntry)
+//
+//            let dataEntry1 = BarChartDataEntry(x: Double(i) , y: self.self.unitsBought[i])
+//            dataEntries1.append(dataEntry1)
+//
+//            //stack barchart
+//            //let dataEntry = BarChartDataEntry(x: Double(i), yValues:  [self.unitsSold[i],self.unitsBought[i]], label: "groupChart")
+//
+//
+//
+//        }
+
+        
+        let chartDataSet = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 8.5), BarChartDataEntry(x: 2, y: 9.5), BarChartDataEntry(x: 2, y: 7.5)], label: "Employee 1")
+        let chartDataSet1 = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 5.5), BarChartDataEntry(x: 2, y: 6.5), BarChartDataEntry(x: 2, y: 9.5)], label: "Employee 2")
+        
+    
+        let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
+        let chartData = BarChartData(dataSets: dataSets)
+        
+        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+
+        
+        let groupSpace = 0.3
+        let barSpace = 0.05
+        let barWidth = 0.3
+        
+        let groupCount = 12
+        let startYear = 0
+        
+        
+        chartData.barWidth = barWidth;
+        barView.xAxis.axisMinimum = Double(startYear)
+        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+        print("Groupspace: \(gg)")
+        barView.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
+        
+        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
+        //chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+        barView.notifyDataSetChanged()
+
+        
+        barView.data = chartData
+
+//        let yVals1 = (0 ..< 12).map(block)
 //        let yVals2 = (startYear ..< endYear).map(block)
 //        let yVals3 = (startYear ..< endYear).map(block)
 //        let yVals4 = (startYear ..< endYear).map(block)
@@ -208,6 +262,7 @@ class EmployerChartViewController: UIViewController {
 //        data.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
 //
 //        barView.data = data
-    }
+//    }
 }
 
+}
