@@ -305,7 +305,7 @@
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pgW-yy-lhr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graph" id="nsq-qu-PLY"/>
+                    <tabBarItem key="tabBarItem" title="Graph" selectedImage="chart1x" id="nsq-qu-PLY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZJ-Vi-nk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,7 +321,7 @@
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Awy-Lv-MF9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Employees" id="ryr-ek-BFe"/>
+                    <tabBarItem key="tabBarItem" title="Employees" selectedImage="employee1x" id="ryr-ek-BFe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeq-eU-Dgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,7 +337,7 @@
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sEB-e6-Aib"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Time Card" id="iTq-fS-JwW"/>
+                    <tabBarItem key="tabBarItem" title="Time Card" selectedImage="clock1x" id="iTq-fS-JwW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jba-Ow-waV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -573,7 +573,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart1x" width="32" height="32"/>
+        <image name="clock1x" width="32" height="32"/>
         <image name="employee.png" width="1536" height="1536"/>
+        <image name="employee1x" width="32" height="32"/>
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
