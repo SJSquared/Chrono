@@ -18,6 +18,9 @@ class AppData: NSObject {
     var employeeWork = [String:Any]()
     var employeeDays = [String]()
     var employeeIds = [String]()
+    var userType : String = ""
+    
+    var employeeIdDays = [String:Any]()
 //    var currentUser: String
 //
 //    var employees = [String : Any?]

@@ -72,6 +72,7 @@ class PunchViewController: UIViewController {
         
         ref = Database.database().reference()
 
+        print("in punchViewController viewDidLoad")
         
         let handle = Auth.auth().addStateDidChangeListener{ (auth, user) in
             self.ref.child("users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -79,9 +80,13 @@ class PunchViewController: UIViewController {
                 
                 // Current Company
                 self.data.currentCompany = self.userValue["currentCompany"] as! String
+                print("currentCompany \(self.data.currentCompany)")
                 
                 // User Type
-                var userType = self.userValue["userType"] as! String
+                self.userType = self.userValue["userType"] as! String
+                self.data.userType = self.userType
+                print("userType 1 \(self.userType)")
+                print("self.data.userType \(self.data.userType)")
                 
                 // Employee Hours
                 self.ref.child("companies").child(self.data.currentCompany).child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -114,8 +119,17 @@ class PunchViewController: UIViewController {
                             print(hours)
                             self.data.employeeWork = hours
                             self.data.employeeDays = keys
+
+                            print("enteringIf userTyper employer")
+                            print("self.userType \(self.userType)")
+                            if(self.data.userType == "employer"){
+                                print("entering getEmployeeData")
+                                getEmployeeData()
+
+                            }
                         }
                     }
+                    
                 })
             })
         }
@@ -134,16 +148,21 @@ class PunchViewController: UIViewController {
             print(error.localizedDescription)
         }
         
-        
-        if userType == "employer" {
+        func getEmployeeData(){
             let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            self.ref.child("companies").child(self.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
-                let value = snapshot.value as! NSDictionary
-                // Saves all the employee IDS in the current company
-                self.data.employeeIds = value.allKeys as! [String]
+                self.ref.child("companies").child(self.data.currentCompany).observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as! NSDictionary
+                    // Saves all the employee IDS in the current company
+                    self.data.employeeIds = value.allKeys as! [String]
+                    
+                    for i in 0...self.data.employeeIds.count-1 {
+                        print("for loop print in punch \(value[self.data.employeeIds[i]])")
+                    }
+                    
                 })
             }
         }
+        
         
         
         
