@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4F810CFAD9A2E5863E83AF99D0DA65AB"
+               BlueprintIdentifier = "D9E09479D84672B386CD0B734AAA85B4"
                BuildableName = "Pods_Chrono.framework"
                BlueprintName = "Pods-Chrono"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4F810CFAD9A2E5863E83AF99D0DA65AB"
+            BlueprintIdentifier = "D9E09479D84672B386CD0B734AAA85B4"
             BuildableName = "Pods_Chrono.framework"
             BlueprintName = "Pods-Chrono"
             ReferencedContainer = "container:Pods.xcodeproj">

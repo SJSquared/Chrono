@@ -24,6 +24,8 @@ class EmployeeChartViewController: UIViewController {
         super.viewDidLoad()
         barChartUpdate()
         print("data.currentCompany \(data.currentCompany)")
+        print("data.employeeDays \(data.employeeDays)")
+        print("data.employeeWork \(data.employeeWork)")
         // Do any additional setup after loading the view.
     }
 
@@ -59,6 +61,6 @@ class EmployeeChartViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
+    
+*/
 }

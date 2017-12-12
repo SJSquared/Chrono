@@ -155,7 +155,7 @@ class EmployerChartViewController: UIViewController {
     }
     
     func updateChartWithData(){
-        var employeeIds = self.data.employeIds
+        var employeeIds = self.data.employeeIds
         
         for i in 0...employeeIds.count-1{
             

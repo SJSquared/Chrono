@@ -27,7 +27,7 @@ class PunchViewController: UIViewController {
     var company: String!
     var userValue : NSDictionary = ["key":"value"]
     var currentCompany : String = ""
-    var userType : ""
+    var userType : String = ""
     
    
     
