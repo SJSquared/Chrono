@@ -155,6 +155,8 @@ class PunchViewController: UIViewController {
                     // Saves all the employee IDS in the current company
                     self.data.employeeIds = value.allKeys as! [String]
                     
+                    var employeeData = [[String:[String:Double]]]()
+                    
                     for i in 0...self.data.employeeIds.count-1 {
                         var idIntervalPair = [String:[String:Double]]()
                         var pairsArray = [String:Double]()
@@ -186,9 +188,13 @@ class PunchViewController: UIViewController {
                             pairsArray[workDayKeys[j] as! String] = interval
                         }
                         idIntervalPair[self.data.employeeIds[i]] = pairsArray
+                        employeeData.append(idIntervalPair)
                         print("idIntervalPair")
                         print(idIntervalPair)
                     }
+                    print("employeeData")
+                    print(employeeData)
+                    self.data.employeeData = employeeData
                 })
             }
         }
