@@ -47,7 +47,7 @@ class EmployerChartViewController: UIViewController {
         
 
 //
-        self.title = "Multiple Bar Chart"
+        self.title = "Employee Hours Summary"
    
         
         barView.chartDescription?.enabled =  false
@@ -102,10 +102,12 @@ class EmployerChartViewController: UIViewController {
         var employeeData = self.data.employeeData
         print(employeeData)
         
-        for i in 0...employeeData.count-1{
-            print(employeeData[i])
-            print(employeeData[i])
-        }
+//        for i in 0...employeeData.count-1{
+//            print(employeeData[i])
+//            var subKeys = employeeData[i].keys
+//            var piece = employeeData[i]
+//            print(piece[subKeys[i]])
+//        }
         
         var dataEntries: [BarChartDataEntry] = []
         var dataEntries1: [BarChartDataEntry] = []
@@ -114,18 +116,20 @@ class EmployerChartViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 8.5), BarChartDataEntry(x: 2, y: 9.5), BarChartDataEntry(x: 2, y: 7.5)], label: "Employee 1")
         let chartDataSet1 = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 5.5), BarChartDataEntry(x: 2, y: 6.5), BarChartDataEntry(x: 2, y: 9.5)], label: "Employee 2")
+        let chartDataSet2 = BarChartDataSet(values: [BarChartDataEntry(x: 1, y: 6.5), BarChartDataEntry(x: 2, y: 6.9), BarChartDataEntry(x: 2, y: 8.0)], label: "Employee 3")
         
-        let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
+        
+        
+        let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1,chartDataSet2]
         let chartData = BarChartData(dataSets: dataSets)
 
-        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
-
+        chartDataSet.colors = [UIColor(red: 0/255, green: 110/255, blue: 137/255, alpha: 1)]
 
         let groupSpace = 0.3
         let barSpace = 0.05
         let barWidth = 0.3
 
-        let groupCount = 12
+        let groupCount = 3
         let startYear = 0
 
 
@@ -142,40 +146,6 @@ class EmployerChartViewController: UIViewController {
         
         barView.data = chartData
 
-//        let yVals1 = (0 ..< 12).map(block)
-//        let yVals2 = (startYear ..< endYear).map(block)
-//        let yVals3 = (startYear ..< endYear).map(block)
-//        let yVals4 = (startYear ..< endYear).map(block)
-//
-//        let set1 = BarChartDataSet(values: yVals1, label: "Company A")
-//        set1.setColor(UIColor(red: 104/255, green: 241/255, blue: 175/255, alpha: 1))
-//
-//        let set2 = BarChartDataSet(values: yVals2, label: "Company B")
-//        set2.setColor(UIColor(red: 164/255, green: 228/255, blue: 251/255, alpha: 1))
-//
-//        let set3 = BarChartDataSet(values: yVals3, label: "Company C")
-//        set3.setColor(UIColor(red: 242/255, green: 247/255, blue: 158/255, alpha: 1))
-//
-//        let set4 = BarChartDataSet(values: yVals4, label: "Company D")
-//        set4.setColor(UIColor(red: 255/255, green: 102/255, blue: 0/255, alpha: 1))
-//
-//        let data = BarChartData(dataSets: [set1, set2, set3, set4])
-//        data.setValueFont(.systemFont(ofSize: 10, weight: .light))
-////        data.setValueFormatter(LargeValueFormatter())
-//
-//        // specify the width each bar should have
-//        data.barWidth = barWidth
-//
-//        // restrict the x-axis range
-//        barView.xAxis.axisMinimum = Double(startYear)
-//
-//        // groupWidthWithGroupSpace(...) is a helper that calculates the width each group needs based on the provided parameters
-//        barView.xAxis.axisMaximum = Double(startYear) + data.groupWidth(groupSpace: groupSpace, barSpace: barSpace) * Double(groupCount)
-//
-//        data.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
-//
-//        barView.data = data
-//    }
 }
 
 }
