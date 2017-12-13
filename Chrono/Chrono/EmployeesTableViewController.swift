@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class EmployeesTableViewController: UITableViewController {
+class EmployeesTableViewController: UIViewController {
 
    
     @IBOutlet var tableview: UITableView!
@@ -36,15 +36,14 @@ class EmployeesTableViewController: UITableViewController {
             self.company = currUser["currentCompany"]
             
             let thisComp = allComp[self.company] as? [String : NSDictionary] ?? [:]
-            let thisUser = thisComp[self.uid] as? [String : Any] ?? [:]
             
             let allE = Array(thisComp.keys) // list of uid
-            self.emps = allE.filter { $0 == "email" }
+            self.emp = allE.filter { $0 == "email" }
             
-            for emp in allE {
-                today = thisUser[singleDate] as? [String : Any] ?? [:]
-                let todaysTimes = [(today["cIn"] != nil ? (today["cIn"] as! String): ""), (today["mOut"] != nil ? (today["mOut"] as! String): ""), (today["mIn"] != nil ? (today["mIn"] as! String): ""), (today["cOut"] != nil ? (today["cOut"] as! String): "")]
-                self.times.append(todaysTimes)
+            for e in allE {
+                let single = allUsers[e] as? [String : String] ?? [:]
+                self.emails.append(single["email"]!)
+                self.emp.append(single["firstName"]! + " " +  single["lastName"]!)
             }
             
         })
@@ -62,15 +61,14 @@ class EmployeesTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dates.count
+ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.emp.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
-        cell.textLabel!.text = self.dates[indexPath.row]
-        cell.detailTextLabel?.numberOfLines = 2;
-        cell.detailTextLabel?.text = self.times[indexPath.row].joined(separator: ", ")
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "eCell")
+        cell.textLabel!.text = self.emp[indexPath.row]
+        cell.detailTextLabel?.text = self.emails[indexPath.row]
         return cell
 }
 
