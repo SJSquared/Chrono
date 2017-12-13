@@ -169,7 +169,7 @@ class PunchViewController: UIViewController {
                         workDayKeys = workDayKeys.filter{$0 != "email"}
                         print("****workDayKeys*****")
                         print(workDayKeys)
-                        
+                        if (workDayKeys.count != 0) {
                         for j in 0...workDayKeys.count - 1 {
                             print("inside j loop")
                             var timeStamp = workDays[workDayKeys[j]] as! NSDictionary
@@ -185,6 +185,7 @@ class PunchViewController: UIViewController {
                             print(dayIntervalPair)
                             pairsArray[workDayKeys[j] as! String] = interval
                         }
+                    }
                         idIntervalPair[self.data.employeeIds[i]] = pairsArray
                         print("idIntervalPair")
                         print(idIntervalPair)
