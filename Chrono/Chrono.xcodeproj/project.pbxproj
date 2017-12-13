@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D05A0B51FDF8144001AE0F0 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05A0B41FDF8144001AE0F0 /* EmployeesViewController.swift */; };
-		9DE353FD1FDF96ED0017BC3C /* PunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE353FC1FDF96ED0017BC3C /* PunchTableViewCell.swift */; };
-		9DF9D9B91FDA36E800FAB7D1 /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */; };
+		A14C31D31FDA328B0024256F /* EmployerChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D21FDA328B0024256F /* EmployerChartViewController.swift */; };
+		A14C31D51FDBD8830024256F /* ChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C31D41FDBD8830024256F /* ChartPageViewController.swift */; };
+		A1E293C21FDF6FE9006A3007 /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E293C11FDF6FE8006A3007 /* PunchViewController.swift */; };
+		A1E293C41FDFA626006A3007 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E293C31FDFA626006A3007 /* AppData.swift */; };
+		A1E293C61FDFA880006A3007 /* EmployeeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E293C51FDFA880006A3007 /* EmployeeChartViewController.swift */; };
 		B0FD1C4AF76C2B593F953BC7 /* Pods_ChronoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */; };
 		BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */; };
 		BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */; };
@@ -52,9 +54,12 @@
 		60EE7B8E86661D491F8B33E8 /* Pods-ChronoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoUITests/Pods-ChronoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79EC589B8B96D1FE738F69AC /* Pods-ChronoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTests/Pods-ChronoTests.release.xcconfig"; sourceTree = "<group>"; };
 		84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D05A0B41FDF8144001AE0F0 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
-		9DE353FC1FDF96ED0017BC3C /* PunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchTableViewCell.swift; sourceTree = "<group>"; };
-		9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchViewController.swift; sourceTree = "<group>"; };
+		A14C31D21FDA328B0024256F /* EmployerChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerChartViewController.swift; sourceTree = "<group>"; };
+		A14C31D41FDBD8830024256F /* ChartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageViewController.swift; sourceTree = "<group>"; };
+		A14C31D61FDE19350024256F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1E293C11FDF6FE8006A3007 /* PunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchViewController.swift; sourceTree = "<group>"; };
+		A1E293C31FDFA626006A3007 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		A1E293C51FDFA880006A3007 /* EmployeeChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeChartViewController.swift; sourceTree = "<group>"; };
 		A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerOnboardViewController.swift; sourceTree = "<group>"; };
 		BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeOnboardViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 		099BC8E37C093796152C12A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A14C31D61FDE19350024256F /* Foundation.framework */,
 				84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */,
 				A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */,
 				24B25CCFC0B91D4F49E03A89 /* Pods_ChronoUITests.framework */,
@@ -140,20 +146,22 @@
 		BFC688BC1FC3A9A900C3BEE8 /* Chrono */ = {
 			isa = PBXGroup;
 			children = (
+				A1E293C31FDFA626006A3007 /* AppData.swift */,
 				BFC688BD1FC3A9A900C3BEE8 /* AppDelegate.swift */,
 				BFC688C11FC3A9A900C3BEE8 /* Main.storyboard */,
-				9DE353FC1FDF96ED0017BC3C /* PunchTableViewCell.swift */,
+				A14C31D41FDBD8830024256F /* ChartPageViewController.swift */,
 				BFC688BF1FC3A9A900C3BEE8 /* ViewController.swift */,
+				A14C31D21FDA328B0024256F /* EmployerChartViewController.swift */,
+				A1E293C51FDFA880006A3007 /* EmployeeChartViewController.swift */,
 				BFC688C41FC3A9A900C3BEE8 /* Assets.xcassets */,
 				BFC688C61FC3A9A900C3BEE8 /* LaunchScreen.storyboard */,
 				BFC688C91FC3A9A900C3BEE8 /* Info.plist */,
 				BFC688EB1FC3AA9000C3BEE8 /* GoogleService-Info.plist */,
+				A1E293C11FDF6FE8006A3007 /* PunchViewController.swift */,
 				BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */,
 				BF2174DC1FD0DF3500977135 /* EmployeeOnboardViewController.swift */,
 				BF414EF21FDA12E7009DAE7B /* employee.png */,
 				BF414EF01FDA1197009DAE7B /* small-business.png */,
-				9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */,
-				9D05A0B41FDF8144001AE0F0 /* EmployeesViewController.swift */,
 			);
 			path = Chrono;
 			sourceTree = "<group>";
@@ -338,15 +346,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chrono/Pods-Chrono-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -491,13 +505,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF9D9B91FDA36E800FAB7D1 /* PunchViewController.swift in Sources */,
+				A14C31D51FDBD8830024256F /* ChartPageViewController.swift in Sources */,
 				BFC688C01FC3A9A900C3BEE8 /* ViewController.swift in Sources */,
-				9D05A0B51FDF8144001AE0F0 /* EmployeesViewController.swift in Sources */,
-				9DE353FD1FDF96ED0017BC3C /* PunchTableViewCell.swift in Sources */,
 				BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */,
+				A1E293C41FDFA626006A3007 /* AppData.swift in Sources */,
 				BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */,
 				BFC688BE1FC3A9A900C3BEE8 /* AppDelegate.swift in Sources */,
+				A1E293C21FDF6FE9006A3007 /* PunchViewController.swift in Sources */,
+				A14C31D31FDA328B0024256F /* EmployerChartViewController.swift in Sources */,
+				A1E293C61FDFA880006A3007 /* EmployeeChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
