@@ -156,9 +156,39 @@ class PunchViewController: UIViewController {
                     self.data.employeeIds = value.allKeys as! [String]
                     
                     for i in 0...self.data.employeeIds.count-1 {
-                        print("for loop print in punch \(value[self.data.employeeIds[i]])")
+                        var idIntervalPair = [String:[String:Double]]()
+                        var pairsArray = [String:Double]()
+                        print("inside i loop")
+                        var workDays = value[self.data.employeeIds[i]] as! NSDictionary
+                        var interval : Double
+                        
+                        print("****workDays*****")
+                        print(workDays)
+                        print(self.data.employeeIds[i])
+                        var workDayKeys = workDays.allKeys as! [String]
+                        workDayKeys = workDayKeys.filter{$0 != "email"}
+                        print("****workDayKeys*****")
+                        print(workDayKeys)
+                        
+                        for j in 0...workDayKeys.count - 1 {
+                            print("inside j loop")
+                            var timeStamp = workDays[workDayKeys[j]] as! NSDictionary
+                            print("****timeStamp*****")
+                            print(timeStamp)
+                            interval = timeStamp["interval"] as! Double
+                            print("****Interval*****")
+                            print(interval)
+                            
+                            var dayIntervalPair : [String: Double]
+                            dayIntervalPair = [workDayKeys[j] as! String : interval]
+                            print("*********dayIntervalPair********")
+                            print(dayIntervalPair)
+                            pairsArray[workDayKeys[j] as! String] = interval
+                        }
+                        idIntervalPair[self.data.employeeIds[i]] = pairsArray
+                        print("idIntervalPair")
+                        print(idIntervalPair)
                     }
-                    
                 })
             }
         }
