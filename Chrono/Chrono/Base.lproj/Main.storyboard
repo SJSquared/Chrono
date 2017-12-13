@@ -320,6 +320,13 @@
                     <view key="view" contentMode="scaleToFill" id="2ze-FC-VqI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-LW-hDy">
+                                <rect key="frame" x="39" y="250" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Awy-Lv-MF9"/>
                     </view>
@@ -467,9 +474,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-zb-rkM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-zb-rkM">
                                 <rect key="frame" x="0.0" y="480" width="188" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2627450980392157" green="0.54117647058823526" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Meal out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -478,10 +484,12 @@
                                     <action selector="clickMealOut:" destination="6CL-yP-E6d" eventType="touchUpInside" id="vyj-Xf-Onh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taI-ik-cxm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taI-ik-cxm">
                                 <rect key="frame" x="188" y="480" width="187" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.28627450980392155" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="DH3-KI-cEw"/>
+                                </constraints>
                                 <state key="normal" title="Meal In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -489,10 +497,12 @@
                                     <action selector="clickMealIn:" destination="6CL-yP-E6d" eventType="touchUpInside" id="177-fG-kho"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-XN-rWZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-XN-rWZ">
                                 <rect key="frame" x="0.0" y="548" width="375" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.32941176470588235" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DGo-ah-Z9c"/>
+                                </constraints>
                                 <state key="normal" title="Clock out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -514,9 +524,8 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-AM-l8P">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-AM-l8P">
                                 <rect key="frame" x="0.0" y="411" width="375" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47352153062820435" blue="0.56997668743133545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Clock In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -525,13 +534,61 @@
                                     <action selector="clickClockIn:" destination="6CL-yP-E6d" eventType="touchUpInside" id="fc5-1K-UqA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-iH-NIV">
-                                <rect key="frame" x="136" y="362" width="146" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-iH-NIV">
+                                <rect key="frame" x="125" y="360" width="126" height="30"/>
                                 <state key="normal" title="View More History"/>
+                                <connections>
+                                    <segue destination="ov0-Q8-mUP" kind="show" id="MRa-Rw-bHe"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcK-dI-9hV">
+                                <rect key="frame" x="91" y="179" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.26274509800000001" green="0.54117647059999996" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcJ-wU-HX0">
+                                <rect key="frame" x="91" y="208" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.86274509799999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV3-Ua-2bh">
+                                <rect key="frame" x="91" y="237" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.86274509799999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49k-D0-Jh1">
+                                <rect key="frame" x="91" y="266" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.26274509800000001" green="0.54117647059999996" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.1843137255" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="taI-ik-cxm" firstAttribute="leading" secondItem="yXO-zb-rkM" secondAttribute="trailing" id="46B-aG-jXg"/>
+                            <constraint firstItem="Fb6-iH-NIV" firstAttribute="centerX" secondItem="5tT-IY-1SG" secondAttribute="centerX" id="Fhp-ph-FBn"/>
+                            <constraint firstItem="SMc-XN-rWZ" firstAttribute="top" secondItem="uH1-AM-l8P" secondAttribute="bottom" constant="67" id="P4p-4J-dNe"/>
+                            <constraint firstItem="SMc-XN-rWZ" firstAttribute="leading" secondItem="uH1-AM-l8P" secondAttribute="leading" id="R32-h3-FlF"/>
+                            <constraint firstAttribute="bottom" secondItem="Fb6-iH-NIV" secondAttribute="bottom" constant="277" id="WsS-lw-X01"/>
+                            <constraint firstItem="SMc-XN-rWZ" firstAttribute="trailing" secondItem="taI-ik-cxm" secondAttribute="trailing" id="Y7D-9g-2eT"/>
+                            <constraint firstItem="SMc-XN-rWZ" firstAttribute="leading" secondItem="5tT-IY-1SG" secondAttribute="leading" id="Yrg-gk-zWs"/>
+                            <constraint firstItem="B6g-2i-8JZ" firstAttribute="bottom" secondItem="taI-ik-cxm" secondAttribute="bottom" constant="117" id="czs-1c-c2D"/>
+                            <constraint firstItem="taI-ik-cxm" firstAttribute="top" secondItem="Fb6-iH-NIV" secondAttribute="bottom" constant="90" id="eIj-6Z-nNJ"/>
+                            <constraint firstItem="B6g-2i-8JZ" firstAttribute="bottom" secondItem="SMc-XN-rWZ" secondAttribute="bottom" constant="49" id="eS0-2n-xMj"/>
+                            <constraint firstItem="Fb6-iH-NIV" firstAttribute="centerX" secondItem="SMc-XN-rWZ" secondAttribute="centerX" id="eYW-7z-NIG"/>
+                            <constraint firstItem="taI-ik-cxm" firstAttribute="baseline" secondItem="yXO-zb-rkM" secondAttribute="firstBaseline" id="nfM-La-BrN"/>
+                            <constraint firstItem="Fb6-iH-NIV" firstAttribute="centerX" secondItem="uH1-AM-l8P" secondAttribute="centerX" id="rXc-ag-lYF"/>
+                            <constraint firstItem="SMc-XN-rWZ" firstAttribute="leading" secondItem="yXO-zb-rkM" secondAttribute="leading" id="vNS-y6-b1U"/>
+                            <constraint firstItem="uH1-AM-l8P" firstAttribute="top" secondItem="Fb6-iH-NIV" secondAttribute="bottom" constant="21" id="w6y-8d-URM"/>
+                            <constraint firstItem="taI-ik-cxm" firstAttribute="top" secondItem="yXO-zb-rkM" secondAttribute="top" id="zui-Sz-zKb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B6g-2i-8JZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Time Card" image="clock1x" landscapeImage="clock1x" id="le9-k2-UtW"/>
@@ -540,13 +597,53 @@
                         <outlet property="clockIn" destination="uH1-AM-l8P" id="3gl-7w-cgh"/>
                         <outlet property="clockOut" destination="SMc-XN-rWZ" id="4yW-dr-68t"/>
                         <outlet property="currTime" destination="86f-Y4-o9c" id="dz2-2T-id6"/>
+                        <outlet property="inTime" destination="JcK-dI-9hV" id="1Nf-RN-jHp"/>
+                        <outlet property="mInTime" destination="gV3-Ua-2bh" id="KxA-tY-h4w"/>
+                        <outlet property="mOutTime" destination="BcJ-wU-HX0" id="zcl-j8-VLS"/>
                         <outlet property="mealIn" destination="taI-ik-cxm" id="xn0-IY-3ae"/>
                         <outlet property="mealOut" destination="yXO-zb-rkM" id="5xm-pa-OEZ"/>
+                        <outlet property="outTime" destination="49k-D0-Jh1" id="ZHe-M4-YVF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MN-Tw-saZ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3764" y="-873.01349325337333"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="o7M-Hz-Z8N">
+            <objects>
+                <tableViewController id="ov0-Q8-mUP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qJv-Da-OfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fJb-ex-ylE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back to Time Card"/>
+                            <connections>
+                                <segue destination="6CL-yP-E6d" kind="show" id="ViN-Mb-Dff"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dRp-be-kVa">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dRp-be-kVa" id="l01-kh-k8w">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ov0-Q8-mUP" id="SfO-5U-v7w"/>
+                            <outlet property="delegate" destination="ov0-Q8-mUP" id="PI4-cN-1EG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Mk-Ds-DBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4561" y="-878"/>
         </scene>
         <!--Graph-->
         <scene sceneID="Wsr-eL-uzp">
@@ -593,7 +690,9 @@
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MRa-Rw-bHe"/>
         <segue reference="GxE-gw-Jr0"/>
+        <segue reference="ViN-Mb-Dff"/>
         <segue reference="0dV-7g-Jvu"/>
     </inferredMetricsTieBreakers>
 </document>
