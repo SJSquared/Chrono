@@ -609,10 +609,10 @@
             </objects>
             <point key="canvasLocation" x="3764" y="-873.01349325337333"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Punch Table View Controller-->
         <scene sceneID="o7M-Hz-Z8N">
             <objects>
-                <tableViewController id="ov0-Q8-mUP" sceneMemberID="viewController">
+                <tableViewController id="ov0-Q8-mUP" customClass="PunchTableViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qJv-Da-OfJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,12 +626,28 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dRp-be-kVa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" id="dRp-be-kVa">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dRp-be-kVa" id="l01-kh-k8w">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="title" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-3U-bQK">
+                                            <rect key="frame" x="32" y="0.0" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="desc" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLB-tw-qDA">
+                                            <rect key="frame" x="32" y="22" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -640,6 +656,9 @@
                             <outlet property="delegate" destination="ov0-Q8-mUP" id="PI4-cN-1EG"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableview" destination="qJv-Da-OfJ" id="5xY-hL-s3k"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mk-Ds-DBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,7 +709,6 @@
         <image name="small-business.png" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MRa-Rw-bHe"/>
         <segue reference="GxE-gw-Jr0"/>
         <segue reference="ViN-Mb-Dff"/>
         <segue reference="0dV-7g-Jvu"/>
