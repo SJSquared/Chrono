@@ -10,23 +10,25 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class EmployeesTableViewController: UIViewController {
+class EmployeesTableViewController: UITableViewController {
 
    
     @IBOutlet var tableview: UITableView!
     var uid: String!
     var ref: DatabaseReference!
     var company: String!
-    var emp : [String] = []
-    var emails : [String] = []
-    
+//    var emp : [String] = []
+//    var emails : [String] = []
+    var emp : [String] = ["Jenny Yang", "Sarah Feldmann", "Jimmy Nguyen"]
+    var emails : [String] = ["jj@jj.com", "s@s.com", "jbn@j.com"]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.ref = Database.database().reference()
         self.uid = Auth.auth().currentUser?.uid
         
-        let refHandle = self.ref.observe(DataEventType.value, with: { (snapshot) in
+        _ = self.ref.observe(DataEventType.value, with: { (snapshot) in
             
             let allValue = snapshot.value as? [String : NSDictionary] ?? [:]
             let allComp = allValue["companies"] as? [String : NSDictionary] ?? [:]
@@ -42,11 +44,12 @@ class EmployeesTableViewController: UIViewController {
             
             for e in allE {
                 let single = allUsers[e] as? [String : String] ?? [:]
+
                 self.emails.append(single["email"]!)
                 self.emp.append(single["firstName"]! + " " +  single["lastName"]!)
             }
-            
         })
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,16 +64,19 @@ class EmployeesTableViewController: UIViewController {
         return 1
     }
     
- func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.emp.count
     }
     
- func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(self.emp)
+        print(self.emails)
+
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "eCell")
         cell.textLabel!.text = self.emp[indexPath.row]
         cell.detailTextLabel?.text = self.emails[indexPath.row]
         return cell
-}
+    }
 
 
 /*
