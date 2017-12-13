@@ -81,10 +81,7 @@ class PunchViewController: UIViewController {
             userInfo: nil,
             repeats: true)
         self.uid = Auth.auth().currentUser?.uid
-        let usersReference = self.ref.child("users").child(self.uid)
-        let r2 = self.ref.child("companies")
-        
-        var refHandle = self.ref.observe(DataEventType.value, with: { (snapshot) in
+        let refHandle = self.ref.observe(DataEventType.value, with: { (snapshot) in
             
             let allValue = snapshot.value as? [String : NSDictionary] ?? [:]
             let allComp = allValue["companies"] as? [String : NSDictionary] ?? [:]

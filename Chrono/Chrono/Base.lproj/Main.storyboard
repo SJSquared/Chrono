@@ -316,7 +316,7 @@
         <!--Employees-->
         <scene sceneID="vEX-FG-nxq">
             <objects>
-                <viewController id="pjz-eg-CaE" customClass="EmployeesViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pjz-eg-CaE" customClass="EmployeesTableViewController" customModule="Chrono" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ze-FC-VqI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,6 +325,16 @@
                                 <rect key="frame" x="39" y="250" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="eCell" selectionStyle="default" indentationWidth="10" id="jug-of-gM3">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jug-of-gM3" id="4tW-uO-IoI">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.22272306680679321" green="0.24197843670845032" blue="0.30423054099082947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

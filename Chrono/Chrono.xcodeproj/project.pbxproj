@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9D05A0B51FDF8144001AE0F0 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D05A0B41FDF8144001AE0F0 /* EmployeesViewController.swift */; };
 		9DE354011FE0A60F0017BC3C /* PunchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE354001FE0A60F0017BC3C /* PunchTableViewController.swift */; };
+		9DE354031FE0B22E0017BC3C /* EmployeesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE354021FE0B22E0017BC3C /* EmployeesTableViewController.swift */; };
 		9DF9D9B91FDA36E800FAB7D1 /* PunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */; };
 		B0FD1C4AF76C2B593F953BC7 /* Pods_ChronoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */; };
 		BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */; };
@@ -54,6 +55,7 @@
 		84BFE8B0E9B4CEDC669B8A18 /* Pods_Chrono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chrono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D05A0B41FDF8144001AE0F0 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		9DE354001FE0A60F0017BC3C /* PunchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchTableViewController.swift; sourceTree = "<group>"; };
+		9DE354021FE0B22E0017BC3C /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
 		9DF9D9B81FDA36E800FAB7D1 /* PunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchViewController.swift; sourceTree = "<group>"; };
 		A7E9D3311DF5FB2BEEF4FC07 /* Pods_ChronoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2174DA1FD0DEF200977135 /* EmployerOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerOnboardViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				BFC688BD1FC3A9A900C3BEE8 /* AppDelegate.swift */,
 				BFC688C11FC3A9A900C3BEE8 /* Main.storyboard */,
+				9DE354021FE0B22E0017BC3C /* EmployeesTableViewController.swift */,
 				9DE354001FE0A60F0017BC3C /* PunchTableViewController.swift */,
 				BFC688BF1FC3A9A900C3BEE8 /* ViewController.swift */,
 				BFC688C41FC3A9A900C3BEE8 /* Assets.xcassets */,
@@ -494,6 +497,7 @@
 				9DF9D9B91FDA36E800FAB7D1 /* PunchViewController.swift in Sources */,
 				BFC688C01FC3A9A900C3BEE8 /* ViewController.swift in Sources */,
 				9D05A0B51FDF8144001AE0F0 /* EmployeesViewController.swift in Sources */,
+				9DE354031FE0B22E0017BC3C /* EmployeesTableViewController.swift in Sources */,
 				BF2174DB1FD0DEF200977135 /* EmployerOnboardViewController.swift in Sources */,
 				BF2174DD1FD0DF3500977135 /* EmployeeOnboardViewController.swift in Sources */,
 				9DE354011FE0A60F0017BC3C /* PunchTableViewController.swift in Sources */,
